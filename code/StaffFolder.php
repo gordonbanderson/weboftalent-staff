@@ -4,6 +4,7 @@
  */
 class StaffFolder extends Page implements RenderableAsPortlet {
   static $db = array(
+    'LinkToIndividualStaffPages' => 'Boolean'
   );
   static $has_one = array(
     'MainImage' => 'Image'
@@ -14,6 +15,7 @@ class StaffFolder extends Page implements RenderableAsPortlet {
   function getCMSFields() {
     $fields = parent::getCMSFields();
     $fields->addFieldToTab( 'Root.Content.Image', new ImageField( 'MainImage' ) );
+    $fields->addFieldToTab( 'Root.Content.Layout', new CheckboxField( 'LinkToIndividualStaffPages', 'If biographies are short, leave this as false to only show a single page of staff' ) );
 
     return $fields;
   }
