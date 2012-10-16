@@ -2,15 +2,45 @@
 /**
  * Defines the StaffFolder page type
  */
-class StaffFolder extends Page {
-   static $db = array(
-   );
-   static $has_one = array(
-   );
-   
-   static $allowed_children = array('Staff');
+class StaffFolder extends Page implements RenderableAsPortlet {
+  static $db = array(
+  );
+  static $has_one = array(
+    'MainImage' => 'Image'
+  );
+
+  static $allowed_children = array( 'Staff' );
+
+  function getCMSFields() {
+    $fields = parent::getCMSFields();
+    $fields->addFieldToTab( 'Root.Content.Image', new ImageField( 'MainImage' ) );
+
+    return $fields;
+  }
+
+  public function getPortletTitle() {
+    return $this->Title;
+  }
+
+
+  // FIXME - make this more efficient
+  public function getPortletImage() {
+    if ( $this->MainImageID ) {
+      return DataObject::get_by_id( 'Image', $this->MainImageID );
+    } else {
+      return null;
+    }
+
+  }
+
+
+
+  public function getPortletCaption() {
+    return '';
+  }
+
 }
- 
+
 class StaffFolder_Controller extends Page_Controller {
   public function StaffFolderCacheKey() {
     $start = isset( $_GET['start'] ) ? (int)( Convert::raw2sql( $_GET['start'] ) ) : 0;
@@ -18,11 +48,14 @@ class StaffFolder_Controller extends Page_Controller {
         'StaffFolders',
         $this->Locale,
         $this->Aggregate( 'Staff' )->Max( 'LastEdited' ),
+        '_',
+        $this->ID,
+        '_',
         $this->Aggregate( 'StaffFolder' )->Max( 'LastEdited' ),
         '_',
         $start
       ) );
   }
 }
- 
+
 ?>

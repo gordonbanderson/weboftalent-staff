@@ -19,7 +19,7 @@ class Staff extends Page {
     $fields = parent::getCMSFields();
     $fields->addFieldToTab("Root.Content.Image", new ImageField('Photo'));
 
-    $fields->addFieldToTab("Root.Content.Main", new TextField('JobTitle'));
+    $fields->addFieldToTab("Root.Content.JobDetail", new TextField('JobTitle', _t('Staff.JOB_TITLE', 'Job Title')));
     
     $fields->addFieldToTab("Root.Content.JobDetail", new EmailField('Email'));
     $fields->addFieldToTab("Root.Content.JobDetail", new TextField('TelephoneNumberDesk'));
