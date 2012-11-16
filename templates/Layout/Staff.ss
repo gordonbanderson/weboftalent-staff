@@ -1,8 +1,11 @@
+$EnsureMenuHidden
+<div class="span12">
 <h1>$Title</h1>
-<% control Photo.SetWidth(280) %>
-<img src="$URL" class="staffPhoto photo" alt="<% _t(STAFF.FacePicture, 'Face picture of %> $Title"/>
-<% end_control %>
 
+<div class="row">
+<div class="span4">
+ <% control Photo.SetWidth(360) %>
+ <img class="ServicePhoto centredImage screenshot" src="$URL" <% end_control %> alt="<% _t(STAFF.FacePicture, 'Face picture of %> $Title" title="ServicePhoto - $Title" />
 <table class="table table-striped smallTable">
 <% if JobTitle %>
 <tr>
@@ -38,7 +41,47 @@
 
 </table>
 
+</div>
+
+<div class="span8">
+<div class="tabbable">
+<ul class="nav nav-tabs tabbed">
+<li class="active"><a class="data-toggle-tab" href="#bio" data-toggle="tab">Bio</a></li>
+
+<% control AllChildren %>
+<li><a class="data-toggle-tab" href="#tab$Pos" data-toggle="tab">$Title</a></li>
+<% end_control %>
+</ul>
+
+<div class="tab-content">
+<div id="bio" class="tab-pane active">
 $Content
+</div>
+<% control AllChildren %>
+<div id="tab$Pos" class="tab-pane">
+$Content
+<% control AllChildren %>
+<div class="row">
+<div class="span1"><% control HomePageScreenShot %><% control Setwidth(70) %><img src="$URL" class="screenshot" /><% end_control %><% end_control %></div>
+<div class="span6"><h5>$Title</h5>$Content</div>
+</div>
+<% end_control %>
+</div>
+<% end_control %>
+</div>
+
+</div><%-- tabbable --%>
+
+
 
 <%-- ensure likes button below everything --%>
+
+</div>
+</div>
+<div class="row"><div class="span12">
 <div class="clearall">&nbsp;</div>
+<% include ParentFolderWithImagesNavigation %>
+</div>
+</div>
+
+</div>
