@@ -4,8 +4,9 @@ $EnsureMenuHidden
 
 <div class="row">
 <div class="span4">
- <% control Photo.SetWidth(360) %>
- <img class="ServicePhoto centredImage screenshot" src="$URL" <% end_control %> alt="<% _t(STAFF.FacePicture, 'Face picture of %> $Title" title="ServicePhoto - $Title" />
+ <% with Photo.SetWidth(360) %>
+ <img class="ServicePhoto centredImage screenshot" src="$URL" <% end_with %> alt="<% _t('Staff.FACE_PICTURE', 'Face picture of - ') %>
+ $Title" title="<% _t('Staff.FACE_PICTURE', 'Face picture of') %> - $Title" />
 <table class="table table-striped smallTable">
 <% if JobTitle %>
 <tr>
@@ -79,9 +80,6 @@ $Content
 </div>
 </div>
 <div class="row"><div class="span12">
-<div class="clearall">&nbsp;</div>
-<% include ParentFolderWithImagesNavigation %>
-</div>
 </div>
 
 </div>
