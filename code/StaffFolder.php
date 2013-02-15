@@ -14,8 +14,8 @@ class StaffFolder extends Page implements RenderableAsPortlet {
 
   function getCMSFields() {
     $fields = parent::getCMSFields();
-    $fields->addFieldToTab( 'Root.Content.Image', new ImageField( 'MainImage' ) );
-    $fields->addFieldToTab( 'Root.Content.Layout', new CheckboxField( 'LinkToIndividualStaffPages', 'If biographies are short, leave this as false to only show a single page of staff' ) );
+    $fields->addFieldToTab( 'Root.Image', new UploadField( 'MainImage' ) );
+    $fields->addFieldToTab( 'Root.Layout', new CheckboxField( 'LinkToIndividualStaffPages', 'If biographies are short, leave this as false to only show a single page of staff' ) );
 
     return $fields;
   }
@@ -49,11 +49,11 @@ class StaffFolder_Controller extends Page_Controller {
     return implode( '_', array(
         'StaffFolders',
         $this->Locale,
-        $this->Aggregate( 'Staff' )->Max( 'LastEdited' ),
+        $this->AllChildren()->max('LastEdited'),
         '_',
         $this->ID,
         '_',
-        $this->Aggregate( 'StaffFolder' )->Max( 'LastEdited' ),
+        $this->LastEdited,
         '_',
         $start
       ) );
