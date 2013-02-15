@@ -17,23 +17,23 @@ class Staff extends Page {
   
   function getCMSFields() {
     $fields = parent::getCMSFields();
-    $fields->addFieldToTab("Root.Content.Image", new ImageField('Photo'));
+    $fields->addFieldToTab("Root.Image", new UploadField('Photo'));
 
-    $fields->addFieldToTab("Root.Content.JobDetail", new TextField('JobTitle', _t('Staff.JOB_TITLE', 'Job Title')));
+    $fields->addFieldToTab("Root.JobDetail", new TextField('JobTitle', _t('Staff.JOB_TITLE', 'Job Title')));
     
-    $fields->addFieldToTab("Root.Content.JobDetail", new EmailField('Email'));
-    $fields->addFieldToTab("Root.Content.JobDetail", new TextField('TelephoneNumberDesk'));
-    $fields->addFieldToTab("Root.Content.JobDetail", new TextField('TelephoneNumberMobile'));
+    $fields->addFieldToTab("Root.JobDetail", new EmailField('Email'));
+    $fields->addFieldToTab("Root.JobDetail", new TextField('TelephoneNumberDesk'));
+    $fields->addFieldToTab("Root.JobDetail", new TextField('TelephoneNumberMobile'));
     
     $fields->renameField("TelephoneNumberDesk", "Telephone Number (Landline)");
     $fields->renameField("TelephoneNumberMobile", "Telephone Number (Mobile)");
     
    
-   // $fields->addFieldToTab("Root.Content.Main", new CheckboxField('ShowOnHomePage'));
+   // $fields->addFieldToTab("Root.Main", new CheckboxField('ShowOnHomePage'));
 
     /*
-    $fields->addFieldToTab('Root.Content.Main', new CalendarDateField('Date'), 'Content');
-    $fields->addFieldToTab('Root.Content.Main', new TextField('Author'), 'Content');
+    $fields->addFieldToTab('Root.Main', new CalendarDateField('Date'), 'Content');
+    $fields->addFieldToTab('Root.Main', new TextField('Author'), 'Content');
     */
     return $fields;
   }
