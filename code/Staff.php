@@ -13,6 +13,9 @@ class Staff extends Page {
   static $has_one = array(
   'Photo' => 'Image'
   );
+
+  private static $icon = 'weboftalent-staff/icons/employee.png'; 
+
   
   
   function getCMSFields() {
