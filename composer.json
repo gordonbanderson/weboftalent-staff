@@ -1,26 +1,25 @@
 {
-  "name": "weboftalent/staff",
-  "description": "Simple module to store and render members of staff for an organisation",
-  "type": "silverstripe-module",
-  "keywords": [
-    "silverstripe",
-    "staff",
-    "people",
-    "weboftalent"
-  ],
-  "authors": [
-    {
-      "name": "Gordon Anderson",
-      "email": "gordon.b.anderson@gmail.com",
-      "homepage": "https://github.com/gordonbanderson/gordonbanderson/weboftalent-staff",
-      "role": "Developer"
-    }
-  ],
-  "support": {
-    "issues": "https://github.com/gordonbanderson/weboftalent-staff/issues"
-  },
-  "require": {
-    "silverstripe/framework": "~3.1"
-  },
-  "license": "BSD-3-Clause"
+	"name": "weboftalent/staff",
+	"description": "Simple module to store and render members of staff for an organisation",
+	"type": "silverstripe-module",
+	"keywords": [
+		"silverstripe",
+		"staff",
+		"people",
+		"weboftalent"
+	],
+	"authors": [{
+		"name": "Gordon Anderson",
+		"email": "gordon.b.anderson@gmail.com",
+		"homepage": "https://github.com/gordonbanderson/gordonbanderson/weboftalent-staff",
+		"role": "Developer"
+	}],
+	"support": {
+		"issues": "https://github.com/gordonbanderson/weboftalent-staff/issues"
+	},
+	"require": {
+		"silverstripe/cms": "~3.1",
+		"weboftalent/portlets": "~3.1"
+	},
+	"license": "BSD-3-Clause"
 }
