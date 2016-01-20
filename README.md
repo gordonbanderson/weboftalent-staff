@@ -1,4 +1,21 @@
 #Functionality
+[![Build Status](https://travis-ci.org/gordonbanderson/weboftalent-staff.svg?branch=continuous_integration)](https://travis-ci.org/gordonbanderson/weboftalent-staff)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-staff/badges/quality-score.png?b=continuous_integration)](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-staff/?branch=continuous_integration)
+[![Code Coverage](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-staff/badges/coverage.png?b=continuous_integration)](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-staff/?branch=continuous_integration)
+[![Build Status](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-staff/badges/build.png?b=continuous_integration)](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-staff/build-status/continuous_integration)
+[![codecov.io](https://codecov.io/github/gordonbanderson/weboftalent-staff/coverage.svg?branch=continuous_integration)](https://codecov.io/github/gordonbanderson/weboftalent-staff?branch=continuous_integration)
+
+[![Latest Stable Version](https://poser.pugx.org/weboftalent/staff/version)](https://packagist.org/packages/weboftalent/staff)
+[![Latest Unstable Version](https://poser.pugx.org/weboftalent/staff/v/unstable)](//packagist.org/packages/weboftalent/staff)
+[![Total Downloads](https://poser.pugx.org/weboftalent/staff/downloads)](https://packagist.org/packages/weboftalent/staff)
+[![License](https://poser.pugx.org/weboftalent/staff/license)](https://packagist.org/packages/weboftalent/staff)
+[![Monthly Downloads](https://poser.pugx.org/weboftalent/staff/d/monthly)](https://packagist.org/packages/weboftalent/staff)
+[![Daily Downloads](https://poser.pugx.org/weboftalent/staff/d/daily)](https://packagist.org/packages/weboftalent/staff)
+
+[![Dependency Status](https://www.versioneye.com/php/weboftalent:staff/badge.svg)](https://www.versioneye.com/php/weboftalent:staff)
+[![Reference Status](https://www.versioneye.com/php/weboftalent:staff/reference_badge.svg?style=flat)](https://www.versioneye.com/php/weboftalent:staff/references)
+
+![codecov.io](https://codecov.io/github/gordonbanderson/weboftalent-staff/branch.svg?branch=continuous_integration)
 * Adds content types Staff and Staff Folder
 
 # Installation
