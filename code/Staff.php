@@ -15,7 +15,7 @@ use PageController;
 */
 class Staff extends \Page
 {
-    public static $db = array(
+    private static $db = array(
         'TelephoneNumberDesk' => 'Varchar',
         'TelephoneNumberMobile' => 'Varchar',
         'Email' => 'Varchar',
@@ -23,11 +23,11 @@ class Staff extends \Page
         'JobTitle' => 'Text',
     );
 
-    public static $has_one = array(
+    private static $has_one = array(
         'Photo' => Image::class,
     );
 
-    private static $icon = 'weboftalent-staff/icons/employee.png';
+    private static $icon = 'weboftalent/staff: icons/employee.png';
 
 
     public function getCMSFields()

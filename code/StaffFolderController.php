@@ -9,6 +9,8 @@ use PageController;
 
 class StaffFolderController extends PageController
 {
+    private static $allowed_children = array('WebOfTalent\Staff\Staff');
+
     public function StaffFolderCacheKey()
     {
         $start = isset($_GET['start']) ? (int) (Convert::raw2sql($_GET['start'])) : 0;

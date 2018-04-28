@@ -6,21 +6,22 @@ use SilverStripe\ORM\FieldType\DBBoolean;
 use SilverStripe\Assets\Image;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Forms\CheckboxField;
+use WebOfTalent\Portlets\RenderableAsPortlet;
+
 /**
 * Defines the StaffFolder page type.
 */
-class StaffFolder extends Page implements RenderableAsPortlet
+class StaffFolder extends \Page implements RenderableAsPortlet
 {
-    public static $db = array(
+    private static $db = array(
         'LinkToIndividualStaffPages' => DBBoolean::class,
     );
-    public static $has_one = array(
+    private static $has_one = array(
         'MainImage' => Image::class,
     );
 
-    private static $icon = 'weboftalent-staff/icons/employees.png';
+    private static $icon = 'weboftalent/staff: icons/employees.png';
 
-    public static $allowed_children = array('Staff');
 
     public function getCMSFields()
     {
