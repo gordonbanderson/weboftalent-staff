@@ -32,7 +32,7 @@
 			"WebOfTalent\\Staff\\Tests\\": "tests/"
 		}
 	},
-	"extras": {
+	"extra": {
 		"expose": [
 			"icons"
 		]
