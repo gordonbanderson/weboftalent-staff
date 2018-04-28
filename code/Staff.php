@@ -1,5 +1,7 @@
 <?php
 
+namespace WebOfTalent\Staff;
+
 use SilverStripe\ORM\FieldType\DBBoolean;
 use SilverStripe\Assets\Image;
 use SilverStripe\AssetAdmin\Forms\UploadField;
@@ -46,6 +48,3 @@ class Staff extends Page
     }
 }
 
-class Staff_Controller extends PageController
-{
-}
