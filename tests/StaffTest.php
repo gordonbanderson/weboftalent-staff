@@ -7,7 +7,7 @@ class StaffTest extends SapphireTest
 {
     public function testGetCMSFields()
     {
-        $staff = new Staff();
+        $staff = new \WebOfTalent\Staff\Staff();
         $fields = $staff->getCMSFields();
         $imageFields = $this->getFieldNamesForTab($fields, 'Root.Image');
         $this->assertEquals(array('Photo'), $imageFields);
