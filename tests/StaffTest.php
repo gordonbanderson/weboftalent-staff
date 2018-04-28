@@ -1,5 +1,8 @@
 <?php
 
+use SilverStripe\Control\Email\Email;
+use SilverStripe\Dev\SapphireTest;
+
 class StaffTest extends SapphireTest
 {
     public function testGetCMSFields()
@@ -10,7 +13,7 @@ class StaffTest extends SapphireTest
         $this->assertEquals(array('Photo'), $imageFields);
 
         $jobFields = $this->getFieldNamesForTab($fields, 'Root.JobDetail');
-        $expected = array('JobTitle', 'Email', 'TelephoneNumberDesk',
+        $expected = array('JobTitle', Email::class, 'TelephoneNumberDesk',
                                 'TelephoneNumberMobile');
         $this->assertEquals($expected, $jobFields);
     }

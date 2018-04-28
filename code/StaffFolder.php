@@ -1,14 +1,21 @@
 <?php
+
+use SilverStripe\ORM\FieldType\DBBoolean;
+use SilverStripe\Assets\Image;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Core\Convert;
+use PageController;
 /**
 * Defines the StaffFolder page type.
 */
 class StaffFolder extends Page implements RenderableAsPortlet
     {
     public static $db = array(
-        'LinkToIndividualStaffPages' => 'Boolean',
+        'LinkToIndividualStaffPages' => DBBoolean::class,
     );
     public static $has_one = array(
-        'MainImage' => 'Image',
+        'MainImage' => Image::class,
     );
 
     private static $icon = 'weboftalent-staff/icons/employees.png';
@@ -41,7 +48,7 @@ class StaffFolder extends Page implements RenderableAsPortlet
     }
 }
 
-class StaffFolder_Controller extends Page_Controller
+class StaffFolder_Controller extends PageController
 {
     public function StaffFolderCacheKey()
     {

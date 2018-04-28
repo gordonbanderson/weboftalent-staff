@@ -1,5 +1,7 @@
 <?php
 
+use SilverStripe\Dev\SapphireTest;
+
 class StaffFolderTest extends SapphireTest
 {
     public function testGetCMSFields()

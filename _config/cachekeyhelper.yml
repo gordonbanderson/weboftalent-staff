@@ -1,2 +1,4 @@
 CacheKeyHelper:
-  SiteTree: ['StaffFolder','Staff']
+  SilverStripe\CMS\Model\SiteTree:
+    - StaffFolder
+    - Staff
