@@ -13,7 +13,7 @@ use PageController;
 /**
 * Defines the StaffPage page type.
 */
-class Staff extends Page
+class Staff extends \Page
 {
     public static $db = array(
         'TelephoneNumberDesk' => 'Varchar',
