@@ -7,6 +7,7 @@ use SilverStripe\Forms\TextField;
 use SilverStripe\Control\Email\Email;
 use SilverStripe\Forms\EmailField;
 use PageController;
+
 /**
 * Defines the StaffPage page type.
 */

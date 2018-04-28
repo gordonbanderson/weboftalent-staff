@@ -19,7 +19,8 @@ class StaffTest extends SapphireTest
     }
 
 
-    private function getFieldnamesForTab($fields, $tabName) {
+    private function getFieldnamesForTab($fields, $tabName)
+    {
         $tab = $fields->findOrMakeTab($tabName);
         $fields = $tab->fieldList();
         $names = array();
@@ -28,5 +29,4 @@ class StaffTest extends SapphireTest
         }
         return $names;
     }
-
 }

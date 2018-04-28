@@ -6,11 +6,12 @@ use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Core\Convert;
 use PageController;
+
 /**
 * Defines the StaffFolder page type.
 */
 class StaffFolder extends Page implements RenderableAsPortlet
-    {
+{
     public static $db = array(
         'LinkToIndividualStaffPages' => DBBoolean::class,
     );
@@ -64,7 +65,6 @@ class StaffFolder_Controller extends PageController
             $this->LastEdited,
             '_',
             $start,
-            )
-        );
+            ));
     }
 }
