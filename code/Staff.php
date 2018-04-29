@@ -37,7 +37,7 @@ class Staff extends \Page
 
         $fields->addFieldToTab('Root.JobDetail', new TextField('JobTitle', _t('Staff.JOB_TITLE', 'Job Title')));
 
-        $fields->addFieldToTab('Root.JobDetail', new EmailField(Email::class));
+        $fields->addFieldToTab('Root.JobDetail', new EmailField('Email'));
         $fields->addFieldToTab('Root.JobDetail', new TextField('TelephoneNumberDesk'));
         $fields->addFieldToTab('Root.JobDetail', new TextField('TelephoneNumberMobile'));
 
