@@ -1,5 +1,8 @@
 # Change Log
 
+## [2.0.1](https://github.com/gordonbanderson/weboftalent-staff/tree/2.0.1) (2018-04-29)
+[Full Changelog](https://github.com/gordonbanderson/weboftalent-staff/compare/2.0.0...2.0.1)
+
 ## [2.0.0](https://github.com/gordonbanderson/weboftalent-staff/tree/2.0.0) (2018-04-29)
 [Full Changelog](https://github.com/gordonbanderson/weboftalent-staff/compare/1.0.1...2.0.0)
 
