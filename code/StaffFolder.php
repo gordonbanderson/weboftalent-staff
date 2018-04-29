@@ -22,6 +22,10 @@ class StaffFolder extends \Page implements RenderableAsPortlet
 
     private static $icon = 'weboftalent/staff: icons/employees.png';
 
+    private static $allowed_children = [
+      'WebOfTalent\Staff\Staff'
+    ];
+
 
     public function getCMSFields()
     {
