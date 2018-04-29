@@ -1,8 +1,7 @@
 # Change Log
 
-## [Unreleased](https://github.com/gordonbanderson/weboftalent-staff/tree/HEAD)
-
-[Full Changelog](https://github.com/gordonbanderson/weboftalent-staff/compare/1.0.1...HEAD)
+## [2.0.0](https://github.com/gordonbanderson/weboftalent-staff/tree/2.0.0) (2018-04-29)
+[Full Changelog](https://github.com/gordonbanderson/weboftalent-staff/compare/1.0.1...2.0.0)
 
 **Closed issues:**
 
