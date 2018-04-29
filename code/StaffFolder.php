@@ -1,6 +1,6 @@
 <?php
 
-namespace WebOfTalent\StaffFolder;
+namespace WebOfTalent\Staff;
 
 use SilverStripe\ORM\FieldType\DBBoolean;
 use SilverStripe\Assets\Image;
