@@ -1,4 +1,5 @@
-#Functionality
+# 
+Functionality
 [![Build Status](https://travis-ci.org/gordonbanderson/weboftalent-staff.svg?branch=master)](https://travis-ci.org/gordonbanderson/weboftalent-staff)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-staff/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-staff/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-staff/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/gordonbanderson/weboftalent-staff/?branch=master)
