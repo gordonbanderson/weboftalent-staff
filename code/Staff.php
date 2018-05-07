@@ -2,13 +2,12 @@
 
 namespace WebOfTalent\Staff;
 
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\ORM\FieldType\DBBoolean;
 use SilverStripe\Assets\Image;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Forms\TextField;
-use SilverStripe\Control\Email\Email;
 use SilverStripe\Forms\EmailField;
-use PageController;
 
 /**
 * Defines the StaffPage page type.
@@ -20,7 +19,8 @@ class Staff extends \Page
         'TelephoneNumberMobile' => 'Varchar',
         'Email' => 'Varchar',
         'ShowOnHomePage' => DBBoolean::class,
-        'JobTitle' => 'Text',
+        'JobTitle' => 'Varchar',
+        'ShortBiography' => 'HTMLText'
     );
 
     private static $has_one = array(
@@ -33,6 +33,14 @@ class Staff extends \Page
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
+
+        $shortBioField = new HTMLEditorField('ShortBiography');
+        $shortBioField->setRows(4);
+        $fields->addFieldToTab('Root.Main',
+            $shortBioField,
+            'Content'
+        );
+
         $fields->addFieldToTab('Root.Image', new UploadField('Photo'));
 
         $fields->addFieldToTab('Root.JobDetail', new TextField('JobTitle', _t('Staff.JOB_TITLE', 'Job Title')));
@@ -43,6 +51,7 @@ class Staff extends \Page
 
         $fields->renameField('TelephoneNumberDesk', 'Telephone Number (Landline)');
         $fields->renameField('TelephoneNumberMobile', 'Telephone Number (Mobile)');
+        $fields->renameField('Content', 'Biography');
 
         return $fields;
     }
